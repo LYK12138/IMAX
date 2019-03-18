@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+			list-style:none;
+			box-sizing:border-box;
+		}
+
+		div{
+			width: 200px;
+			height: 200px;
+			border: 1px solid #fff;
+			float: left;
+			background:black;
+			position:relative;
+		}
+		
+		.xian{
+			display: block;
+			width: 100px;
+			height: 1px;
+			border: 1px solid #fff;
+			position:absolute;
+			top:95px;
+			left: 50px;
+			transform:rotate(45deg);
+			transition: all 0.2s;
+		}
+		.xianbian{
+			display: block;
+			height: 1px;
+			border: 1px solid #fff;
+			position:absolute;
+			transform:rotate(45deg);
+			transition: all 0.2s;
+
+
+			/* 变的 */
+			width: 40px;
+			top:136px;
+			left:120px;
+		}
+		
+		.yuan{
+			display: block;
+			width: 100px;
+			height: 1px;
+			border: 1px solid #fff;
+			position:absolute;
+			top:95px;
+			left: 50px;
+			transform:rotate(135deg);
+			transition: all  0.2s;
+		}
+		.yuanbian{
+			display:block;
+			width: 100px;
+			
+			border:1px solid #fff;
+			position:absolute;
+			
+			transform:rotate(135deg);
+			transition: all  0.2s;
+
+			/* 有变化的 */
+			border-radius:50%;
+			top:40px;
+			left: 40px;
+			height:100px;
+		}
+
+
+
+		.xx{
+			display: block;
+			width: 100px;
+			height: 1px;
+			border: 1px solid #fff;
+			margin-top:47px;
+			margin-left: auto;
+			margin-right: auto;
+			position:absolute;
+		}
+		.x1{
+			top:5px;
+			left: 51px;
+			transition: all  0.6s;
+		}
+		.x1b{
+			top:5px;
+			left: 51px;
+			/* 变的 */
+			transform:rotate(45deg);
+			top:48px;
+		}
+		.x2{
+			top:46px;
+			left: 51px;
+			transition: all  linear 1s;
+			text-align:center;
+			
+		}
+		.x2b{
+			top:46px;
+			left: 51px;
+			width: 0px;
+			border:0px;
+			
+			left: 60%;
+			transform: translateX(-50%);
+		}
+		.x3{
+			top:90px;
+			left:51px;
+			transition: all  1s;
+		}
+		.x3b{
+			top:90px;
+			left:51px;
+			/* 变的 */
+			transform:rotate(135deg);
+			top:48px;
+		}
+		.black{
+			width: 600px;
+			height: 300px;
+			margin:0 auto;
+			background:black;
+			/* color:transparent; */
+			color:#fff;
+			text-align: center;
+			line-height: 300px;
+			font-weight: 600;
+			font-size:116px;
+		}
+	</style>
+</head>
+<body>
+	<div class="ss">
+		<span class="yuan"></span>
+		<span class="xian"></span>
+	</div>
+	<div class="ss2">
+		<span class="x1 xx"></span>
+		<span class="x2 xx"></span>
+		<span class="x3 xx"></span>
+	</div>
+	<br>
+
+
+	<div class="black">IMAX</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="../js/jquery-3.3.1/jquery-3.3.1.js"></script>
+	<script>
+	/*	$('.ss').click(function(){
+			$('.xian').css({'width':'40px','top':'136px','left':'120px'})
+			$('.yuan').css({'height':'100px','top':'40px','left':'40px','border-radius':'50%'})
+		})*/
+		$('.ss').click(function(){
+/*				if($('.xian').hasClass('xianbian')){
+					$('.xian').addClass('xian');
+					$('.xian').removeClass('xianbian');
+				}else{
+					$('.xian').addClass('xianbian');
+					$('.xian').removeClass('xian');
+				}
+
+				if($('.yuan').hasClass('yuanbian')){
+					$('.yuan').addClass('yuan');
+					$('.yuan').removeClass('yuanbian');
+				}else{
+					$('.yuan').addClass('yuanbian');
+					$('.yuan').removeClass('yuan');
+				}
+*/
+				$('.xian').toggleClass('xianbian');
+				$('.yuan').toggleClass('yuanbian');
+			/*console.log($('.xian').hasClass('xianbian'))*/
+		})
+		/*$('.ss2').click(function(){
+			$('.x1').css({'transform':'rotate(135deg)','top':'48px'})
+			$('.x3').css({'transform':'rotate(45deg)','top':'48px'})
+			$('.x2').css('display','none')
+		})*/
+		$('.ss2').click(function(){
+				$('.x1').toggleClass('x1b');
+				$('.x2').toggleClass('x2b');
+				$('.x3').toggleClass('x3b');
+			/*console.log($('.xian').hasClass('xianbian'))*/
+		})
+	</script>
+</body>
+</html>
